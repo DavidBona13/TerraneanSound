@@ -17,8 +17,8 @@ const Register = () => {
     return (
         <div className='containerRegistro'>
             <section className='section'>
-                <h1 className='registro'>Regístrate</h1>
                 <form className='formulario'>
+                    <h1 className='registro'>Regístrate</h1>
                     <div className='divNombre'>
                         <label className='cNombre' htmlFor='nombre'>Nombre de usuario:</label>
                         <div className='divInNom'>
@@ -34,7 +34,7 @@ const Register = () => {
                     <div className='divContrasenya'>
                         <label className='cContrasenya' htmlFor='pwd'>Contraseña:</label>
                         <div className='divInPwd'>
-                            <input className='inPwd' name='pwd'  type={showPassword ? 'text' : 'password'} placeholder='fsdfsdf'></input>
+                            <input className='inPwd' name='pwd'  type={showPassword ? 'text' : 'password'}></input>
                             <button className="iconoOjosPassword" type="button" onClick={togglePasswordVisibility}>
                                 {!showPassword ? <FaEyeSlash className="icono"/> : <FaEye className="icono" />}
                             </button>

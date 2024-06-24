@@ -154,7 +154,7 @@
     font-size: 12px;
 }
 
-.btnIniciar{
+.btnIniciar2{
     background-color: transparent;
     outline: none;
     border: 2px solid transparent;
@@ -162,6 +162,19 @@
     font-family: 'Manrope', sans-serif;
     font-weight: 900;
     font-size: 12px;
+}
+
+.btnIniciar2:hover{
+    font-size: 13px;
+}
+
+.btnIniciar2:active {
+    transform: translateY(2px); /* Hundir el botón ligeramente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajusta la sombra para el efecto de hundimiento */
+    font-size: 12px;
+    background-color: transparent;
+    outline: none;
+    border: transparent;
 }
 
 .divFinal {

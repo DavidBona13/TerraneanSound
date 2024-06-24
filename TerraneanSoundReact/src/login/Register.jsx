@@ -52,7 +52,7 @@ const Register = () => {
                     <button className='btnCrear'>Crear</button>
                     <div className='divFinal'>
                         <p className='txt'>¿Tiene una cuenta registrada?</p>
-                        <button className='btnIniciar' type='submit'>Iniciar sesión</button>
+                        <button className='btnIniciar2' type='submit'>Iniciar sesión</button>
                     </div>
                 </form>
             </section>

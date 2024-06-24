@@ -14,16 +14,22 @@ const Login = () => {
     return(
         <div className="pantalla">
             <section className="section">
-                <h1>Iniciar sesión</h1>
                 <form className="formulario">
+                <h1>Iniciar sesión</h1>
                     <div className="divCorreo">
-                        <label htmlFor='mail'>Correo electrónico</label>
-                        <input type="text" name="mail" placeholder="correo electrónico"></input>
+                        <label className='label' htmlFor='mail'>Correo electrónico</label>
+                        <div className="divInput">
+                            <input type="text" name="mail" placeholder="correo electrónico" className="inMail"></input>
+                        </div>
                     </div>
                     <div className="divPwd">
-                        <label htmlFor='pwd'>Contraseña</label>
-                        <input type={showPassword? "text" : "password"} name="pwd" placeholder="contraseña"></input>
-                        <button onClick={btn_pwd} type="button" className="btnPwd">{!showPassword ? <FaEyeSlash  className="icono"/> : <FaEye className="icono"/>}</button>
+                        <label className="label" htmlFor='pwd'>Contraseña</label>
+                        <div className="divInput">
+                            <input type={showPassword? "text" : "password"} name="pwd" placeholder="contraseña" className="inPwd"></input>
+                            <button onClick={btn_pwd} type="button" className="btnPwd">
+                                {!showPassword ? <FaEyeSlash  className="icono"/> : <FaEye className="icono"/>}
+                            </button>
+                        </div>
                     </div>
                     <button type="submit" className="btnIniciar">Iniciar</button>
                     <div className="divFinal">

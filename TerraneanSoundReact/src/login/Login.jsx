@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../../src/assets/css/login.css';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     //const [email, setEmail] = useState("");
     //const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        const storedCount = localStorage.getItem('registerCount');
+        if(storedCount !== null){
+            setCount(parseInt(storedCount, 10));
+        }
+    })
+
+    const suma = () => {
+        const nCount = count + 1;
+        setCount(nCount);
+        localStorage.setItem('registerCount', nCount);
+    }
 
     const btn_pwd = () => {
         setShowPassword(!showPassword);
@@ -31,10 +47,10 @@ const Login = () => {
                             </button>
                         </div>
                     </div>
-                    <button type="submit" className="btnIniciar">Iniciar</button>
+                    <button type="submit" className="btnIniciar" >Iniciar</button>
                     <div className="divFinal">
                         <p>¿No tienes una cuenta registrada? </p>
-                        <button className="btnRegistrarse">Registrarse</button>
+                        <button className="btnRegistrarse" onClick={() => navigate('/')}>Registrarse</button>
                     </div>
                 </form>
             </section>

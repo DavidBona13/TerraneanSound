@@ -1,10 +1,12 @@
 import React , { useState } from 'react';
 import '../../src/assets/css/register.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {    
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const navigate = useNavigate();
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -52,7 +54,7 @@ const Register = () => {
                     <button className='btnCrear'>Crear</button>
                     <div className='divFinal'>
                         <p className='txt'>¿Tiene una cuenta registrada?</p>
-                        <button className='btnIniciar2' type='submit'>Iniciar sesión</button>
+                        <button className='btnIniciar2' type='submit' onClick={() => navigate('/login')}>Iniciar sesión</button>
                     </div>
                 </form>
             </section>

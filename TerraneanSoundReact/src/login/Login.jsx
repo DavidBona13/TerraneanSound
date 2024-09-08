@@ -47,10 +47,10 @@ const Login = () => {
                             </button>
                         </div>
                     </div>
-                    <button type="submit" className="btnIniciar" >Iniciar</button>
+                    <button type="submit" className="btnIniciar" onClick={() => navigate('/header')} >Iniciar</button>
                     <div className="divFinal">
                         <p>¿No tienes una cuenta registrada? </p>
-                        <button className="btnRegistrarse" onClick={() => navigate('/')}>Registrarse</button>
+                        <button className="btnRegistrarse" onClick={() => navigate('/register')}>Registrarse</button>
                     </div>
                 </form>
             </section>

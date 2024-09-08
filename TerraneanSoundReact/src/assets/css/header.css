@@ -17,9 +17,40 @@ h1 {
     margin-left: 15px;
 }
 
-.icono {
+.divBusqueda {
+    border: 2px solid rgba(193, 229, 255, 0.62);
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Coloca el ícono a la izquierda y el botón a la derecha */
+    border-radius: 20px;
+    background-color: rgba(193, 229, 255, 0.62);
+    padding: 5px; /* Añade algo de espacio interno */
+    width: 50%;
+}
+
+.inBuscador {
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante entre el ícono y el botón */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0 10px; /* Añade espacio entre el input y los íconos */
+}
+
+.btnBuscador {
+    border: none;
+    outline: none;
+    background-color: transparent;
     color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    cursor: pointer; /* Hace que parezca un botón clicable */
+}
+
+.icono {
+    color: white !important;
     width: 25px;
+    height: 25px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
